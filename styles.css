@@ -1,0 +1,204 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(/img/KG6NrT3-original-pokemon-wallpaper.jpg);
+    background-size: cover;
+    overflow: auto;
+}
+
+/* Estilo para el contenedor de entrada y botón */
+#pokemon-info {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* Estilo para el campo de entrada */
+#guess-name {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* Estilo para el botón */
+#submit-guess {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#submit-guess:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de intentos */
+#pokemon-info-container {
+    display: flex;
+    flex-direction: column-reverse; /* Hace que los intentos más recientes se muestren arriba */
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 80px;
+}
+
+/* Contenedor de cada intento */
+.attempt-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuadro de contenido */
+.square-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 120px;
+    height: 140px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Colores para el cuadro de contenido */
+.square-content.correct {
+    background-color: #34d685; /* Verde para correcto */
+}
+
+.square-content.incorrect {
+    background-color: #ff6347; /* Rojo para incorrecto */
+}
+
+/* Animación de brillo para cuando se adivina correctamente */
+@keyframes highlight {
+    0% { background-color: #34d685; }
+    50% { background-color: #a8e8a8; }
+    100% { background-color: #34d685; }
+}
+
+/* Clase para aplicar la animación */
+.highlight-animation {
+    animation: highlight 1s ease-in-out;
+}
+
+/* Imagen de retroalimentación */
+.feedback-image {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Contenedor de tipos */
+.type-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Elemento de tipo */
+.type {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Colores para cada tipo de Pokémon */
+.type.normal {
+    background-color: #A8A77A;
+}
+
+.type.fire {
+    background-color: #EE8130;
+}
+
+.type.water {
+    background-color: #6390F0;
+}
+
+.type.electric {
+    background-color: #F7D02C;
+}
+
+.type.grass {
+    background-color: #7AC74C;
+}
+
+.type.ice {
+    background-color: #96D9D6;
+}
+
+.type.fighting {
+    background-color: #C22E28;
+}
+
+.type.poison {
+    background-color: #A33EA1;
+}
+
+.type.ground {
+    background-color: #E2BF65;
+}
+
+.type.flying {
+    background-color: #A98FF3;
+}
+
+.type.psychic {
+    background-color: #F95587;
+}
+
+.type.bug {
+    background-color: #A6B91A;
+}
+
+.type.rock {
+    background-color: #B6A136;
+}
+
+.type.ghost {
+    background-color: #735797;
+}
+
+.type.dragon {
+    background-color: #6F35FC;
+}
+
+.type.dark {
+    background-color: #705746;
+}
+
+.type.steel {
+    background-color: #B7B7CE;
+}
+
+.type.fairy {
+    background-color: #D685AD;
+}
